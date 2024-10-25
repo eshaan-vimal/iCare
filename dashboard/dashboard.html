@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SickSense Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;600&family=Yeseva+One&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <link rel="stylesheet" href="./dashboard.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="main-container">
+        <nav class="sidebar">
+            <div class="logo">SickSense</div>
+            <ul>
+                <li><a href="#personal-information" class="active">
+                    <i class="fas fa-user"></i> Personal Information
+                </a></li>
+                <li><a href="#predictive-diagnosis">
+                    <i class="fas fa-stethoscope"></i> Predictive Diagnosis
+                </a></li>
+                <li><a href="#my-reports">
+                    <i class="fas fa-file-medical"></i> My Reports
+                </a></li>
+                <li><a href="#doctor-referral">
+                    <i class="fas fa-user-md"></i> Doctor Referral
+                </a></li>
+                <li><a href="../home/home.html" class="logout-button">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </a></li>
+            </ul>
+        </nav>
+        <section id="main-content">
+            <div id="personal-information" class="page">
+                <h2>Personal Information</h2>
+                <form id="personal-information-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age" placeholder="Enter your age" required>
+                    <label for="gender">Gender:</label>
+                    <select id="gender" name="gender" required>
+                        <option value="">Select gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <label for="height">Height (cm):</label>
+                    <input type="number" id="height" name="height" placeholder="Enter your height in cm" required>
+                    <label for="weight">Weight (kg):</label>
+                    <input type="number" id="weight" name="weight" placeholder="Enter your weight in kg" required>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <div id="predictive-diagnosis" class="page">
+                <h2>Predictive Diagnosis</h2>
+                <form id="symptoms-form">
+                    <label for="symptoms">Enter your symptoms (comma separated):</label>
+                    <input type="text" id="symptoms" name="symptoms" placeholder="e.g., fever, cough" required>
+                    <button type="submit">Get Diagnosis</button>
+                </form>
+                <div id="diagnosis-result" style="display: none; margin-top: 20px;">
+                    <h2>Diagnosis</h2>
+                    <h3 id="predicted-disease"></h3>
+                    <br>
+                    <h2>Remedy</h2>
+                    <h3 id="treatment-remedy"></h3>
+                </div>
+            </div>
+            <div id="my-reports" class="page">
+                <h2>My Reports</h2>
+                <p>Your medical reports and history will be displayed here.</p>
+            </div>
+            <div id="doctor-referral" class="page">
+                <h2>Doctor Referral</h2>
+                <div class="chatbot-container">
+                    <div class="chatbox" id="chatbox">
+                        <p><strong>SickSense AI:</strong> Hello! How can I assist you with finding a doctor today?</p>
+                    </div>
+                    <div class="chatbot-input">
+                        <input type="text" id="user-input" placeholder="Type your question here..." />
+                        <button id="send-btn">Send</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="./dashboard.js"></script>
+</body>
+</html>

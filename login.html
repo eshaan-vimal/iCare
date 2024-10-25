@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SickSense - Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="login_style.css">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+    <style>
+        body, html 
+        {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Lexend Deca', sans-serif;
+            background-color: #1a237e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        #particles-js 
+        {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+
+        .container 
+        {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            width: 400px;
+            text-align: center;
+            z-index: 1;
+            position: relative;
+            animation: fadeIn 0.8s forwards;
+        }
+
+        @keyframes fadeIn 
+        {
+            to 
+            {
+                opacity: 1;
+                transform: translateY(0);
+                transform: translateY(-20px);
+            }
+        }
+
+        .logo 
+        {
+            font-family: 'Yeseva One', cursive;
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: #fff;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.25);
+        }
+
+        .login-form h2 
+        {
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+            color: white;
+            font-family: 'Lexend Deca', sans-serif;
+            
+        }
+
+        .form-group 
+        {
+            margin-bottom: 1.5rem;
+            text-align: left;
+            position: relative;
+            
+        }
+
+        .form-group label 
+        {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            color: white;
+        }
+
+        .form-group input 
+        {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-bottom: 2px solid rgba(255,255,255,0.4);
+            background: transparent;
+            color: white;
+            font-size: 1rem;
+        }
+
+        .form-group input:focus 
+        {
+            outline: none;
+            border-bottom-color: #4caf50;
+            transform: translateY(-2px);
+        }
+
+        .btn 
+        {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 25px;
+            background: linear-gradient(45deg, #4caf50, #45a049);
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+            font-family: 'Lexend Deca', sans-serif;
+        }
+
+        .btn:hover 
+        {
+            background: linear-gradient(45deg, #45a049, #4caf50);
+            box-shadow: 0 7px 20px rgba(76, 175, 80, 0.6);
+            transform: translateY(-2px);
+        }
+
+        .message 
+        {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: #ffffff;
+        }
+
+
+        .password-toggle 
+        {
+            position: absolute;
+            right: 0;
+            top: 10px;
+            cursor: pointer;
+            color: rgba(255,255,255,0.6);
+        }
+
+        .password-toggle:hover 
+        {
+            color: white;
+            
+        }
+
+        .register-text
+        {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .register-text:hover
+        {
+            color: #55c458;
+            text-decoration: none;
+            text-shadow: 0 5px 30px #72c04b;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="particles-js"></div>
+
+    <div class="container">
+        <div class="logo">
+            SickSense
+        </div>
+
+        <h2 style="color: #fff; font-size:large">Welcome</h2>
+
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                <span id="passwordToggle" class="password-toggle">🔒</span>
+            </div>
+
+            <button type="submit" class="btn">Log In</button>
+        </form>
+
+        <p class="message">Don't have an account? <a href="register.html" class="register-text">Register</a></p>
+    </div>
+
+    <script>
+        
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 100, density: { enable: true, value_area: 800 } },
+                color: { value: '#ffffff' },
+                shape: { type: 'circle', stroke: { width: 0, color: '#000000' } },
+                opacity: { value: 0.9, random: false },
+                size: { value: 3, random: true },
+                line_linked: { enable: true, distance: 150, color: '#ffffff', opacity: 0.4, width: 1 },
+                move: { enable: true, speed: 1.6, direction: 'none', random: false, straight: false, out_mode: 'out', attract: { enable: false } }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' }, resize: true },
+                modes: {
+                    repulse: { distance: 100, duration: 0.4 },
+                    push: { particles_nb: 4 }
+                }
+            },
+            retina_detect: true
+        });
+
+
+        document.getElementById('loginForm').addEventListener('submit', async (e) => 
+        {
+            e.preventDefault();
+            
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            try 
+            {
+                const response = await fetch('http://localhost:5000/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ username, password })
+                });
+
+                const data = await response.json();
+                
+                if (data.status === 'success') 
+                {
+                    localStorage.setItem('token', data.token);
+                    localStorage.setItem('username', data.username);
+                    alert('Login successful!');
+                    
+                    window.location.href = '../dashboard/dashboard.html';
+                } 
+                else 
+                {
+                    alert(data.message || 'Login failed. Please check your credentials.');
+                }
+            } 
+            catch (error) 
+            {
+                console.error('Error:', error);
+                alert('An error occurred during login. Please try again.');
+            }
+        });
+
+        document.getElementById('passwordToggle').addEventListener('click', () => 
+        {
+            const passwordInput = document.getElementById('password');
+            const passwordToggle = document.getElementById('passwordToggle');
+            
+            if (passwordInput.type === 'password') 
+            {
+                passwordInput.type = 'text';
+                passwordToggle.textContent = '👁';
+            } 
+            else 
+            {
+                passwordInput.type = 'password';
+                passwordToggle.textContent = '🔒';
+            }
+        });
+    </script>
+</body>
+</html>

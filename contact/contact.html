@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SickSense - Contact Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./contact.css">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <div id="particles-js"></div>
+
+    <header>
+        <nav>
+            <div class="logo" onclick="window.location.href='home/home.html'">SickSense</div>
+            <ul>
+                <li><a href="/home/home.html">Home</a></li>
+                <li><a href="/about/about.html">About Us</a></li>
+                <li><a href="/contact/contact.html">Contact Us</a></li>
+                <li><a href="/login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content fade-in">
+        <section class="hero">
+            <h1 class="main-heading">Contact Us</h1>
+            <p class="subheading">We're here to assist you. Feel free to reach out!</p>
+        </section>
+
+        <div class="contact-container">
+            <div class="contact-form">
+                <h2>Get in Touch</h2>
+                <form action="#" method="POST" id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">SUBMIT</button>
+                </form>
+            </div>
+            <div class="contact-info">
+                <div class="info-box">
+                    <h4>Emergency</h4>
+                    <p>+91 123456789</p>
+                    <p>+91 987654321</p>
+                </div>
+                <div class="info-box">
+                    <h4>Location</h4>
+                    <p>Mumbai, Maharashtra</p>
+                    <p>India</p>
+                </div>
+                <div class="info-box">
+                    <h4>Email</h4>
+                    <p>info@SickSense.com</p>
+                    <p>support@SickSense.com</p>
+                </div>
+                <div class="info-box">
+                    <h4>Working Hours</h4>
+                    <p>Mon-Fri: 9AM - 5PM</p>
+                    <p>Sat-Sun: Closed</p>
+                </div>
+            </div>
+        </div>
+<!-- Wrap the iframe in a container div -->
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.792765995659!2d72.89735127466535!3d19.072846982131086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c627a20bcaa9%3A0xb2fd3bcfeac0052a!2sK.%20J.%20Somaiya%20College%20of%20Engineering!5e0!3m2!1sen!2sin!4v1729631784462!5m2!1sen!2sin" 
+                width="900" 
+                height="300" 
+                style="border:0; border-radius: 4px; margin-top: 20px;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+
+
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../../static/home/home.html">Home</a></li>
+                    <li><a href="../../static/about/about.html">About Us</a></li>
+                    <li><a href="../../static/contact/contact.html">Contact Us</a></li>
+                    <li><a href="../../templates/login.html">Login</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>+91 123456789</p>
+                <p>info@SickSense.com</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 SickSense. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="./contact.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+</body>
+</html>
